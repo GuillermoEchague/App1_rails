@@ -34,6 +34,7 @@ gem install mysql2 --platform=ruby -- '--with-mysql-lib="C:\mysql-connector\lib"
 
 ## Generar controlador
 ```bash
+# El nombre del controlador debe ser en Ingles y Plural
 rails g controller Subject index show edit new delete
 rails g controller page index show edit new delete
 
@@ -42,6 +43,7 @@ rails destroy controller subject index show edit new delete
 
 ## Generar Modelos
 ```bash
+# El nombre del Modelo debe ser en Ingles y Singular
 rails g model Subject name:string position:integer visible:boolean
 rails db:migrate
 rails db:seed 
@@ -72,6 +74,11 @@ rails g factory_bot:model post title content published user:references
 ```bash
 rails g serializer post 
 ```
+## Ejecutar test
+```bash
+rails test
+```
+
 ## Generar de devise
 ```bash
 rails g devise:install
