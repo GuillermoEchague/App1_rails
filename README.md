@@ -84,6 +84,11 @@ rails active_storage:install
 rails db:migrate
 ```
 
+## Scaffold
+```bash
+rails g scaffold Category name:string
+```
+
 
 ## Generar de devise
 ```bash
