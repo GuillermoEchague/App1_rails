@@ -78,6 +78,12 @@ rails g serializer post
 ```bash
 rails test
 ```
+## Active Storage
+```bash
+rails active_storage:install
+rails db:migrate
+```
+
 
 ## Generar de devise
 ```bash
