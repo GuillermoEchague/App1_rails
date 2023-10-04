@@ -65,6 +65,27 @@ rails db:migrate
 rails db:migrate RAILS_ENV=test
 ```
 
+## Editar Modelos
+```bash
+rails generate migration AddCategoryToProducts category:references
+# Migracion a DB
+rails db:migration
+# Eliminar DB
+rails db:reset
+# Couldn't drop database 'db/development.sqlite3'
+rails db:drop:_unsafe
+
+rails db:fixtures:load
+
+db:migrate runs (single) migrations that have not run yet.
+db:create creates the database
+db:drop deletes the database
+db:schema:load creates tables and columns within the existing database following schema.rb. This will delete existing data.
+db:setup does db:create, db:schema:load, db:seed
+db:reset does db:drop, db:setup
+db:migrate:reset does db:drop, db:create, db:migrate
+```
+
 ## Generar Controladores
 ```bash
 rails g factory_bot:model user email name auth_token
